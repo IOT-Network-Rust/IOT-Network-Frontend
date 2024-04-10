@@ -1,6 +1,8 @@
+#[allow(unused)]
 use actix_web::{web, App, HttpServer, Responder, HttpResponse};
 use std::fs;
 use std::path;
+mod data;
 
 const FOLDER: &str = "templates";
 
@@ -17,7 +19,10 @@ async fn index() -> impl Responder {
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
-        App::new().route("/", web::get().to(index))
+        App::new()
+            .route("/", web::get().to(index))
+            .route("/data/", web::get().to(data::fetch_device_names))
+            .route("/data/get_device", web::get().to(data::data))
     })
     .bind("127.0.0.1:8080")?
     .run()
