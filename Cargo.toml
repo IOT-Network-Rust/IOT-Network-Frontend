@@ -1,7 +1,9 @@
 [package]
-name = "IOT-Network-Frontend"
+name = "iot_network_frontend"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
 actix-web = "4.5.1"
+lazy_static = "1.4.0"
+tera = "1.19.1"
