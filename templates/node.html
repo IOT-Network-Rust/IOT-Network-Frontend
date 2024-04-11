@@ -1,0 +1,53 @@
+{% extends "tracker.html" %} {% block view %}
+<!--Chart.js import-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!--Represents a view of data-->
+<section
+  class="data-visualizer"
+  style="display: flex; align-items: center; justify-content: center; flex-direction: column;"
+>
+  <div>
+    <h2>Graph Of Data</h2>
+  </div>
+  <div style="width: 100%; height: 500px; display: flex; align-items: center; justify-content: center;">
+    <canvas id="myChart"></canvas>
+  </div>
+
+  <script>
+    const ctx = document.getElementById("myChart");
+
+    new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange", "Bldsffue", "Blsfue", "fsfsf"],
+        datasets: [
+          {
+            label: "# of Votes",
+            data: [12, 19, 3, 5, 2, 3, 8, 9, 12],
+            borderWidth: 1,
+          },
+        ],
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+      },
+    });
+  </script>
+</section>
+
+<!--Analysis section description...-->
+<section>
+
+</section>
+
+<!--Tips to better use site-->
+<section>
+
+</section>
+
+{% endblock %}

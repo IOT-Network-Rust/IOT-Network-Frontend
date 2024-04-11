@@ -1,10 +1,8 @@
-{% extends "layout.html" %}
-
-{% block body %}
+{% extends "layout.html" %} {% block body %}
 <!--
     Main Part of Page
     -->
-<body class="row g-2" style="max-height: 76.5vh; overflow-y: hidden;">
+<body class="row g-2" style="max-height: 76.5vh; overflow-y: hidden">
   <!--
         Side bar that lists all devices
         -->
@@ -76,137 +74,11 @@
     </div>
   </div>
 
-  <!--
-        Shows nodes(ways to interact with device)
-        -->
   <div
     style="width: 80%; max-height: 76.5vh; overflow-y: auto"
     class="bg-secondary"
   >
-    <div
-      style="padding-top: 10px; padding-left: 20px; padding-right: 20px"
-      class="justify-content-center align-items-center"
-    >
-      <div
-        class="row align-items-center"
-        style="
-          width: 80%;
-          margin: 3%;
-          margin-top: 0;
-          background-color: aliceblue;
-          border-radius: 10px;
-          padding: 2%;
-          padding-top: 3%;
-          padding-bottom: 3%;
-        "
-      >
-        <div
-          class="col"
-          style="
-            width: 60%;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-          "
-        >
-          <img
-            src="https://images.ctfassets.net/pdf29us7flmy/4FaqpZFMenRQoDl0LGqFes/02c40a20ee37917f3e117b9c599f132d/GOLD-6487-CareerGuide-Batch04-Images-GraphCharts-01-Line.png?w=1440&q=100&fm=avif"
-            class="col card-img-top"
-            alt="..."
-            style="max-width: 100%; max-height: 100%"
-          />
-          <label>Graph Of ...</label>
-        </div>
-        <div class="col" style="width: 40%">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-
-      <div
-        class="row align-items-center"
-        style="
-          width: 80%;
-          margin: 3%;
-          margin-top: 0;
-          background-color: aliceblue;
-          border-radius: 10px;
-          padding: 2%;
-          padding-top: 3%;
-          padding-bottom: 3%;
-        "
-      >
-        <div
-          class="col"
-          style="
-            width: 60%;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-          "
-        >
-          <img
-            src="https://images.ctfassets.net/pdf29us7flmy/4FaqpZFMenRQoDl0LGqFes/02c40a20ee37917f3e117b9c599f132d/GOLD-6487-CareerGuide-Batch04-Images-GraphCharts-01-Line.png?w=1440&q=100&fm=avif"
-            class="col card-img-top"
-            alt="..."
-            style="max-width: 100%; max-height: 100%"
-          />
-          <label>Graph Of ...</label>
-        </div>
-        <div class="col" style="width: 40%">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-
-      <div
-        class="row align-items-center"
-        style="
-          width: 80%;
-          margin: 3%;
-          margin-top: 0;
-          background-color: aliceblue;
-          border-radius: 10px;
-          padding: 2%;
-          padding-top: 3%;
-          padding-bottom: 3%;
-        "
-      >
-        <div
-          class="col"
-          style="
-            width: 60%;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-          "
-        >
-          <img
-            src="https://images.ctfassets.net/pdf29us7flmy/4FaqpZFMenRQoDl0LGqFes/02c40a20ee37917f3e117b9c599f132d/GOLD-6487-CareerGuide-Batch04-Images-GraphCharts-01-Line.png?w=1440&q=100&fm=avif"
-            class="col card-img-top"
-            alt="..."
-            style="max-width: 100%; max-height: 100%"
-          />
-          <label>Graph Of ...</label>
-        </div>
-        <div class="col" style="width: 40%">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
+    {% block view %} {% endblock %}
   </div>
 </body>
 
