@@ -3,6 +3,7 @@
 
 
 use actix_web::{web, App, HttpServer};
+use actix_files::Files;
 mod data;
 mod views;
 use std::thread;
@@ -20,11 +21,13 @@ async fn main() -> std::io::Result<()> {
 
             .route("/credits", web::get().to(views::credits))
 
-            .route("/data/", web::get().to(data::fetch_device_names))
-            .route("/data/get_device", web::get().to(data::data))
+            .route("/data/", web::get().to(data::fetch_device_catalog))
+            .route("/data/get_device/{device_id}", web::get().to(data::fetch_device_data))
+            .service(Files::new("/dist", "./dist/"))
+
             
     })
-    .bind("127.0.0.1:8080")?
+    .bind("127.0.0.1:9090")?
     .run()
     .await
 }
